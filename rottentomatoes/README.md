@@ -37,8 +37,9 @@ end
 
 ## Walkthrough ##
 ----------
-(rottentomatoes.gif)
+![Video Walkthrough](rottentomatoes.gif)
 
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
  
 > Written with [StackEdit](https://stackedit.io/).
 
