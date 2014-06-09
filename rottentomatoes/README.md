@@ -1,4 +1,44 @@
-README
+RottenTomatoes iOS client Demo
+==============================
+
+------------------------------
+This is an iOS demo application for displaying the latest box office movies using the [RottenTomatoes API](http://developer.rottentomatoes.com/).
+
+## Time Spent ##
+Approximately 15-20 hours
+
+## 3rd Party Libraries ##
+
+Used [cocoapods](http://cocoapods.org/) to manage the following 3rd party libraries.
+
+$ cat Podfile
+platform :ios, '7.0'
+
+target "rottentomatoes" do
+pod "AFNetworking", "~> 2.0"
+pod 'ALAlertBanner', '~>0.3.1'
+pod 'MBProgressHUD', '~> 0.8'
+end
+
+target "rottentomatoesTests" do
+
+end
+
+
+
+##Completed User Stories##
+
+ 1.**Required** User can view a list of movies from Rotten Tomatoes.  Poster images must be loading asynchronously.(**UIImageView+AFNetworking.h**)
+ 2.**Required** User can view movie details by tapping on a cell
+ 3.**Required** User sees loading state while waiting for movies API - (**MBProgressHUD.h**)
+ 4.**Required** User sees error message when there's a networking error - (**ALAlertBanner.h**)
+ 5.**Required** User can pull to refresh the movie list.
+ 6.**Optional** Add a tab bar for Box Office and DVD
+
+## Walkthrough ##
 ----------
 
-RottenTomatoes iOS client Demo
+
+
+ 
+> Written with [StackEdit](https://stackedit.io/).
