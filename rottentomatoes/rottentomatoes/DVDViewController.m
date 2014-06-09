@@ -11,6 +11,7 @@
 #import "MovieCell.h"
 #import "MovieDetailedViewController.h"
 #import "MBProgressHUD.h"
+#import <ALAlertBanner.h>
 
 
 
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *movieTblView;
 @property (strong,nonatomic) NSArray *movies;
 @property (strong,nonatomic) MBProgressHUD *hud;
+
 
 @end
 
@@ -33,6 +35,15 @@
     }
     return self;
 }
+
+- (void)showAlertBannerInView {
+    ALAlertBanner *banner = [ALAlertBanner alertBannerForView:self.view style:ALAlertBannerStyleFailure position:ALAlertBannerPositionTop title:@"Error" subtitle:@"Network Error" tappedBlock:^(ALAlertBanner *alertBanner) {
+        NSLog(@"tapped!");
+        [alertBanner hide];
+    }];
+    [banner show];
+}
+
 
 - (void)viewDidLoad
 {
@@ -65,11 +76,15 @@
     NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=g9au4hv6khv6wzvzgt55gpqs";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        self.movies = object[@"movies"];
-        [self.movieTblView reloadData];
-    }];
-    
+        
+        if (connectionError != nil) {
+            [self showAlertBannerInView];
+        }
+        else{
+            id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            self.movies = object[@"movies"];
+            [self.movieTblView reloadData];
+        }}];
 }
 
 
@@ -80,6 +95,10 @@
     [self.hud show:YES];
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [ALAlertBanner forceHideAllAlertBannersInView:self.view];
+}
 
 - (void)viewDidAppear:(BOOL)animated{
     [self getData];

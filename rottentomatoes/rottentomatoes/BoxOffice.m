@@ -48,6 +48,11 @@
     [self.hud show:YES];
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [ALAlertBanner forceHideAllAlertBannersInView:self.view];
+}
+
 
 - (void)viewDidAppear:(BOOL)animated{
     [self getData];
