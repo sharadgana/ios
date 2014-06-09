@@ -28,12 +28,12 @@ end
 
 ##Completed User Stories##
 
- 1.**Required** User can view a list of movies from Rotten Tomatoes.  Poster images must be loading asynchronously.(**UIImageView+AFNetworking.h**)
- 2.**Required** User can view movie details by tapping on a cell
- 3.**Required** User sees loading state while waiting for movies API - (**MBProgressHUD.h**)
- 4.**Required** User sees error message when there's a networking error - (**ALAlertBanner.h**)
- 5.**Required** User can pull to refresh the movie list.
- 6. **Optional** Add a tab bar for Box Office and DVD
+ - **Required** User can view a list of movies from Rotten Tomatoes.  Poster images must be loading asynchronously.(**UIImageView+AFNetworking.h**)
+ - **Required** User can view movie details by tapping on a cell
+ - **Required** User sees loading state while waiting for movies API - (**MBProgressHUD.h**)
+ - **Required** User sees error message when there's a networking error - (**ALAlertBanner.h**)
+ - **Required** User can pull to refresh the movie list.
+ - **Optional** Add a tab bar for Box Office and DVD
 
 ## Walkthrough ##
 ----------
