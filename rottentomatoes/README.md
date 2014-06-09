@@ -33,7 +33,7 @@ end
  3.**Required** User sees loading state while waiting for movies API - (**MBProgressHUD.h**)
  4.**Required** User sees error message when there's a networking error - (**ALAlertBanner.h**)
  5.**Required** User can pull to refresh the movie list.
- 6.**Optional** Add a tab bar for Box Office and DVD
+ 6. **Optional** Add a tab bar for Box Office and DVD
 
 ## Walkthrough ##
 ----------
