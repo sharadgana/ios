@@ -37,8 +37,7 @@ end
 
 ## Walkthrough ##
 ----------
-
-
+(rottentomatoes.gif)
 
  
 > Written with [StackEdit](https://stackedit.io/).
