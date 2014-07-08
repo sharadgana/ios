@@ -25,4 +25,5 @@ Approximately 15-20 hours
   
 ## Walkthrough ##
 ----------
+![Video Walkthrough](twitter.gif)
 
