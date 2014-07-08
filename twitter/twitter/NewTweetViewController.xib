@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewTweetViewController">
+            <connections>
+                <outlet property="ProfilePoster" destination="59y-3N-3LQ" id="KdU-Y9-yGB"/>
+                <outlet property="ProfileScreenName" destination="BwZ-c5-YVq" id="a2J-rt-8vZ"/>
+                <outlet property="ProfileUserName" destination="8yz-iD-sOi" id="HDA-ng-g0h"/>
+                <outlet property="tweetTextField" destination="LQY-pf-JEX" id="LbL-2G-3r7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sharad Ganapathy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-iD-sOi">
+                    <rect key="frame" x="71" y="35" width="220" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="h7k-JX-sOf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@test_sharadgana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwZ-c5-YVq">
+                    <rect key="frame" x="71" y="57" width="233" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="233" id="TWU-Ug-d5e"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59y-3N-3LQ">
+                    <rect key="frame" x="7" y="29" width="63" height="55"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="QHJ-NP-gtO"/>
+                        <constraint firstAttribute="width" constant="63" id="oE7-X6-q9h"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-pf-JEX">
+                    <rect key="frame" x="7" y="116" width="320" height="400"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BwZ-c5-YVq" firstAttribute="top" secondItem="8yz-iD-sOi" secondAttribute="bottom" constant="1" id="7UQ-5U-91e"/>
+                <constraint firstItem="LQY-pf-JEX" firstAttribute="top" secondItem="59y-3N-3LQ" secondAttribute="bottom" constant="35" id="7n7-Xk-ojP"/>
+                <constraint firstItem="8yz-iD-sOi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="86b-gZ-1cU"/>
+                <constraint firstItem="BwZ-c5-YVq" firstAttribute="leading" secondItem="59y-3N-3LQ" secondAttribute="trailing" constant="1" id="87U-0M-w6m"/>
+                <constraint firstAttribute="trailing" secondItem="8yz-iD-sOi" secondAttribute="trailing" constant="29" id="FEl-aq-4B3"/>
+                <constraint firstItem="LQY-pf-JEX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="7" id="PgG-qE-0KN"/>
+                <constraint firstAttribute="trailing" secondItem="LQY-pf-JEX" secondAttribute="trailing" constant="-7" id="RCx-Nq-ZCK"/>
+                <constraint firstItem="59y-3N-3LQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="dp8-gd-hcw"/>
+                <constraint firstAttribute="bottom" secondItem="LQY-pf-JEX" secondAttribute="bottom" constant="49" id="lEe-cd-Nr8"/>
+                <constraint firstItem="59y-3N-3LQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="7" id="sOi-Pg-0rl"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
